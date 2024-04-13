@@ -1,0 +1,111 @@
+/* Section Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://github.com/leanbeefs/finalz/blob/main/pexels-daniel-absi-952670.jpg?raw=true');
+    background-size: cover;
+    background-position: center;
+    overflow-x: hidden;
+}
+
+.title {
+    display: inline-block;
+    padding: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
+.hidden{
+    display: none;
+}
+/* Navbar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    transition: top 0.3s;
+    z-index: 1000;
+}
+.navbar a {
+    color: white;
+    margin-right: 10px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.navbar button {
+    transition-property: background-color, color;
+    transition-duration: 0.3s;
+}
+
+/* Burger Styles */
+.burgir {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+}
+
+/* Card Styles */
+#portfolio {
+    overflow-y: auto;
+}
+.cards-container {
+    display: flex; /* Change display to flex */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    -webkit-overflow-scrolling: touch;
+}
+.card {
+    width: 300px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    overflow-y: auto;
+    flex-shrink: 0;
+}
+.card img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.container {
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.container h4 {
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.container p {
+    font-size: 14px;
+    color: #666;
+    display: inline-block;
+}
+
+/* Skill Styles */
+.skills-container {
+    margin: 20px 0;
+}
+
+/* Social Icons Styles */
+.social-icons {
+    display: flex;
+    flex-direction: column;
+}
+.social-icons i {
+    font-size: 30px;
+}

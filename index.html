@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 h-full">
+
+    <!-- Navbar -->
+    <div class="navbar flex justify-between items-center bg-gray-600 dark:bg-gray-800 text-white">
+        <h1>My portfolio</h1>
+        <div class="hidden md:flex space-x-4">
+            <button id="aboutBtn" class="btn">About Me</button>
+            <button id="portfolioBtn" class="btn">Portfolio</button>
+            <button id="skillsBtn" class="btn">Skills</button>
+            <button id="contactBtn" class="btn">Contacts</button>
+        </div>
+        <div class="sm:hidden flex items-center space-x-2">
+            <button id="darkModeToggle" class="text-white focus:outline-none">Dark Mode</button>
+            <button id="burgerIcon" class="text-white focus:outline-none">
+                <i class="fas fa-bars fa-lg"></i>
+            </button>
+        </div>
+        <!-- Popup Menu -->
+        <div id="popupMenu" class="hidden fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center">
+            <div class="bg-white p-4 rounded shadow-lg relative">
+                <button id="closeBtn" class="absolute top-0 right-0 mr-2 mt-2 text-gray-500 focus:outline-none">
+                    <i class="fas fa-times"></i>
+                </button>
+                <button id="aboutBtnPopup" class="block w-full text-left py-2 px-4 text-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700">About Me</button>
+                <button id="portfolioBtnPopup" class="block w-full text-left py-2 px-4 text-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700">Portfolio</button>
+                <button id="skillsBtnPopup" class="block w-full text-left py-2 px-4 text-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700">Skills</button>
+                <button id="contactBtnPopup" class="block w-full text-left py-2 px-4 text-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700">Contact</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Main Content -->
+    <div id="content" class=" overflow-hidden ">
+        <!-- Home Section -->
+        <section class="home mb-8 mt-8 bg-white dark:bg-gray-900 bg-opacity-80 p-6 rounded-lg h-screen">
+            <div class="intro relative z-10 leading-normal">
+                <div class="text-content mt-80 sm:mt-80 md:mt-96 lg:mt-96 lg:ml-24 bg-blend-darken">
+                    <h2 class="text-3xl font-medium">Hi, I'm</h2>
+                    <h1 class="name text-5xl font-mono font-black md:w-96">Orillos, Lark</h1>
+                    <p class="text-lg">BSIT</p>
+                </div>
+            </div>
+            <!-- My Picture -->
+            <div class="picture-container flex justify-end absolute inset-0 overflow-hidden sm:ml-16">
+                <div class="picture relative xxs:invisible md:mr-6">
+                    <img src="https://github.com/leanbeefs/finalz/blob/main/retouch_2024020617302221.png?raw=true" 
+                        alt="Profile Picture" class=" sm:h-80 ml-16 md:h-full mt-28 md:mt-28 shadow-xl ">
+                </div>
+            </div>
+            <!-- Logo -->
+            <div class="picture-container-left flex absolute inset-0 overflow-hidden">
+                <div class="picture-left relative hidden md:block max-h-full">
+                    <img src="https://github.com/leanbeefs/cc14/blob/main/asdadasda%20(1).png?raw=true" 
+                        alt="Left Profile Picture" class="mr-16 sm:h-96 sm:mt-11 md:mt-16 lg:ml-16 lg:h-full lg:mt-8 animate-pulse">
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="mb-8 mt-8 relative bg-white dark:bg-gray-900 bg-opacity-80 p-6 rounded-lg h-screen">
+            <div class="title-container flex justify-start absolute z-10">
+                <h2 class="title bg-gray-400 sm:p-2 rounded-tr-lg rounded-br-lg sm:mt-16">PORTFOLIO</h2>
+            </div>
+            <div class="cards-container flex overflow-x-auto mt-20 gap-10">
+                <div class="card w-64 md:w-80 mx-auto mb-8">
+                    <a href="https://leanbeefs.github.io/indexhhtml/" target="_blank">
+                        <img src="https://github.com/leanbeefs/cc14/blob/main/icone-html-bleue.png?raw=true" alt="HTML Activity" class="rounded-t-lg">
+                        <div class="container p-4 bg-gray-100 rounded-b-lg">
+                            <h4><b>HTML Activity</b></h4>
+                        </div>
+                    </a>
+                </div>
+                <div class="card w-64 md:w-80 mx-auto mb-8">
+                    <a href="https://leanbeefs.github.io/ccss/" target="_blank">
+                        <img src="https://github.com/leanbeefs/cc14/blob/main/919826.png?raw=true" alt="CSS Activity" class="rounded-t-lg">
+                        <div class="container p-4 bg-gray-100 rounded-b-lg">
+                            <h4><b>CSS Activity</b></h4>
+                        </div>
+                    </a>
+                </div>
+                <div class="card w-64 md:w-80 mx-auto mb-8">
+                    <a href="https://leanbeefs.github.io/finalz/" target="_blank">
+                        <img src="https://github.com/leanbeefs/cc14/blob/main/github-icon-2048x1988-jzvzcf2t.png?raw=true" alt="CIT14 website" class="rounded-t-lg">
+                        <div class="container p-4 bg-gray-100 rounded-b-lg">
+                            <h4><b>CIT14 website</b></h4>
+                        </div>
+                    </a>
+                </div>
+                <div class="card w-64 md:w-80 mx-auto mb-8">
+                    <a href="https://leanbeefs.github.io/Personal-Portfolio/" target="_blank">
+                        <img src="https://github.com/leanbeefs/cc14/blob/main/github-icon-2048x1988-jzvzcf2t.png?raw=true" alt="CIT14 website" class="rounded-t-lg">
+                        <div class="container p-4 bg-gray-100 rounded-b-lg">
+                            <h4><b>Old Portfolio</b></h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="mb-8 mt-8 relative bg-white dark:bg-gray-900 bg-opacity-80 p-6 rounded-lg h-screen">
+            <div class="title-container flex justify-start z-10">
+                <h2 class="title bg-gray-400 p-2 rounded-tr-lg rounded-br-lg mt-10">SKILLS</h2>
+            </div>
+            <div class="skills-container grid grid-cols-3 gap-2 z-50-10">
+                <div class="skill flex flex-col items-center">
+                    <div class="skill-label font-bold">HTML</div>
+                    <!-- Fat circular loading bar with 50% loading -->
+                    <div class="h-24 w-24 md:h-20 md:w-20 bg-gray-200 rounded-full flex justify-center items-center">
+                        <div class="border-12 border-t-12 md:border-6 bg-gradient-to-r from-blue-500 to-transparent h-16 w-16 md:h-14 md:w-14 rounded-full animate-spin"></div>
+                    </div>
+                    <div class="text-center mt-1 font-bold">50%</div>
+                </div>
+                <div class="skill flex flex-col items-center">
+                    <div class="skill-label font-bold">CSS</div>
+                    <!-- Fat circular loading bar with 60% loading -->
+                    <div class="h-24 w-24 md:h-20 md:w-20 bg-gray-200 rounded-full flex justify-center items-center">
+                        <div class="border-12 border-t-12 md:border-6 bg-gradient-to-r from-blue-500 to-transparent h-16 w-16 md:h-14 md:w-14 rounded-full animate-spin"></div>
+                    </div>
+                    <div class="text-center mt-1 font-bold">60%</div>
+                </div>
+                <div class="skill flex flex-col items-center">
+                    <div class="skill-label font-bold">JavaScript</div>
+                    <!-- Fat circular loading bar with 40% loading -->
+                    <div class="h-24 w-24 md:h-20 md:w-20 bg-gray-200 rounded-full flex justify-center items-center">
+                        <div class="border-12 border-t-12 md:border-6 bg-gradient-to-r from-blue-500 to-transparent h-16 w-16 md:h-14 md:w-14 rounded-full animate-spin"></div>
+                    </div>
+                    <div class="text-center mt-1 font-bold">40%</div>
+                </div>
+                <div class="skill flex flex-col items-center">
+                    <div class="skill-label font-bold">Tailwind</div>
+                    <!-- Fat circular loading bar with 10% loading -->
+                    <div class="h-24 w-24 md:h-20 md:w-20 bg-gray-200 rounded-full flex justify-center items-center">
+                        <div class="border-12 border-t-12 md:border-6 bg-gradient-to-r from-blue-500 to-transparent h-16 w-16 md:h-14 md:w-14 rounded-full animate-spin"></div>
+                    </div>
+                    <div class="text-center mt-1 font-bold">10%</div>
+                </div>
+                <div class="skill flex flex-col items-center">
+                    <div class="skill-label font-bold">Bootstrap</div>
+                    <!-- Fat circular loading bar with 50% loading -->
+                    <div class="h-24 w-24 md:h-20 md:w-20 bg-gray-200 rounded-full flex justify-center items-center">
+                        <div class="border-12 border-t-12 md:border-6 bg-gradient-to-r from-blue-500 to-transparent h-16 w-16 md:h-14 md:w-14 rounded-full animate-spin"></div>
+                    </div>
+                    <div class="text-center mt-1 font-bold">50%</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- contacts section -->
+        <section id="contacts" class="mb-8 mt-8 relative bg-white dark:bg-gray-900 bg-opacity-80 p-6 rounded-lg h-screen">
+            <div class="title-container flex items-center justify-between mt-20 z-10">
+                
+                <!-- Title -->
+                <h2 class="title bg-gray-400 p-2 rounded-tr-lg rounded-br-lg mr-2">CONTACTS</h2>
+                
+                <!-- Image placeholder -->
+                <div class="bg-gray-300 rounded-full">
+                    <img src="https://github.com/leanbeefs/cc14/blob/main/IMG_20231113_212758_275%20(1).jpg?raw=true" 
+                        alt="Profile Picture" class="h-52 w-auto md:h-72 lg shadow-xl">
+                </div>
+
+                <!-- Social Icons -->
+                <div class="social-icons flex-col sm:top-24">
+                    <a href="#" onclick="copyEmail(event)" class="my-2"><i class="fas fa-envelope"></i><span class="hidden sm:inline"> EMAIL</span></a>
+                    <a href="https://www.facebook.com/lark.orillos.15" target="_blank" class="my-2"><i class="fab fa-facebook"></i><span class="hidden sm:inline"> FACEBOOK</span></a>
+                    <a href="https://www.instagram.com/lean._.beef/" target="_blank" class="my-2"><i class="fab fa-instagram"></i><span class="hidden sm:inline"> INSTAGRAM</span></a>
+                    <a href="https://discordapp.com/channels/@me/Furiousss#4532" target="_blank" class="my-2"><i class="fab fa-discord"></i><span class="hidden sm:inline"> DISCORD</span></a>
+                </div>
+            </div>
+            <!-- Texts -->
+            <div class=" flex flex-col items-center mt-12">
+                <p class="text-lg text-wrap text-center">I specialize in front end back end development.
+                    The projects above are  a product of hard work and passion for coding and designing.</p>
+                <p class="text-teal-950 text-lg text-center font-bold">Feel free to contact me in 
+                    the links provided on the side</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top fixed bottom-4 right-4 bg-gray-500 text-white px-4 py-2 rounded-full shadow-md animate-bounce" onclick="smoothScrollToTop(1000)">Back to top</button>
+
+    <!-- JS Ready -->
+    <script src="script.js"></script>
+</body>
+</html>
