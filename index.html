@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,22 +8,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100 dark:bg-gray-900 h-full">
+<body class="bg-gray-100 h-full">
 
     <!-- Navbar -->
-    <div class="navbar flex justify-between items-center bg-gray-600 dark:bg-gray-800 text-white">
-        <h1>My portfolio</h1>
-        <div class="hidden md:flex space-x-4">
+    <div class="navbar flex justify-between items-center bg-gray-600 text-white">
+        <h1 class="md:ml-3">My portfolio</h1>
+        <!-- Burger Icon for Small Screens -->
+        <div class="sm:hidden flex items-center space-x-2">
+            <button id="burgerIcon" class="text-white focus:outline-none">
+                <i class="fas fa-bars fa-lg"></i>
+            </button>
+        </div>
+        <!-- Navigation Links -->
+        <div class="hidden md:flex space-x-4 md:mr-10">
             <button id="aboutBtn" class="btn">About Me</button>
             <button id="portfolioBtn" class="btn">Portfolio</button>
             <button id="skillsBtn" class="btn">Skills</button>
             <button id="contactBtn" class="btn">Contacts</button>
-        </div>
-        <div class="sm:hidden flex items-center space-x-2">
-            <button id="darkModeToggle" class="text-white focus:outline-none">Dark Mode</button>
-            <button id="burgerIcon" class="text-white focus:outline-none">
-                <i class="fas fa-bars fa-lg"></i>
-            </button>
         </div>
         <!-- Popup Menu -->
         <div id="popupMenu" class="hidden fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center">
@@ -31,10 +32,10 @@
                 <button id="closeBtn" class="absolute top-0 right-0 mr-2 mt-2 text-gray-500 focus:outline-none">
                     <i class="fas fa-times"></i>
                 </button>
-                <button id="aboutBtnPopup" class="block w-full text-left py-2 px-4 text-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700">About Me</button>
-                <button id="portfolioBtnPopup" class="block w-full text-left py-2 px-4 text-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700">Portfolio</button>
-                <button id="skillsBtnPopup" class="block w-full text-left py-2 px-4 text-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700">Skills</button>
-                <button id="contactBtnPopup" class="block w-full text-left py-2 px-4 text-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700">Contact</button>
+                <button id="aboutBtnPopup" class="block w-full text-left py-2 px-4 text-gray-800 hover:bg-gray-200">About Me</button>
+                <button id="portfolioBtnPopup" class="block w-full text-left py-2 px-4 text-gray-800 hover:bg-gray-200">Portfolio</button>
+                <button id="skillsBtnPopup" class="block w-full text-left py-2 px-4 text-gray-800 hover:bg-gray-200">Skills</button>
+                <button id="contactBtnPopup" class="block w-full text-left py-2 px-4 text-gray-800 hover:bg-gray-200">Contact</button>
             </div>
         </div>
     </div>
@@ -44,7 +45,7 @@
         <!-- Home Section -->
         <section class="home mb-8 mt-8 bg-white dark:bg-gray-900 bg-opacity-80 p-6 rounded-lg h-screen">
             <div class="intro relative z-10 leading-normal">
-                <div class="text-content mt-80 sm:mt-80 md:mt-96 lg:mt-96 lg:ml-24 bg-blend-darken">
+                <div class="text-content mt-80 sm:mt-80 md:mt-96 md:p-10 lg:p-48 bg-blend-darken">
                     <h2 class="text-3xl font-medium">Hi, I'm</h2>
                     <h1 class="name text-5xl font-mono font-black md:w-96">Orillos, Lark</h1>
                     <p class="text-lg">BSIT</p>
@@ -52,16 +53,16 @@
             </div>
             <!-- My Picture -->
             <div class="picture-container flex justify-end absolute inset-0 overflow-hidden sm:ml-16">
-                <div class="picture relative xxs:invisible md:mr-6">
+                <div class="picture relative md:mr-6">
                     <img src="https://github.com/leanbeefs/finalz/blob/main/retouch_2024020617302221.png?raw=true" 
-                        alt="Profile Picture" class=" sm:h-80 ml-16 md:h-full mt-28 md:mt-28 shadow-xl ">
+                        alt="Profile Picture" class=" sm:h-80 ml-16 md:h-full mt-40 md:mt-28 shadow-xl ">
                 </div>
             </div>
             <!-- Logo -->
             <div class="picture-container-left flex absolute inset-0 overflow-hidden">
                 <div class="picture-left relative hidden md:block max-h-full">
                     <img src="https://github.com/leanbeefs/cc14/blob/main/asdadasda%20(1).png?raw=true" 
-                        alt="Left Profile Picture" class="mr-16 sm:h-96 sm:mt-11 md:mt-16 lg:ml-16 lg:h-full lg:mt-8 animate-pulse">
+                        alt="Left Profile Picture" class="mr-16 sm:h-96 sm:mt-11 md:mt-16 md:h-5/6 md:ml-12 animate-pulse">
                 </div>
             </div>
         </section>

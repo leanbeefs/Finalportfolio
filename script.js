@@ -63,16 +63,14 @@ document.getElementById("skillsBtnPopup").addEventListener("click", function() {
 document.getElementById("contactBtnPopup").addEventListener("click", function() {
     smoothScroll("#contacts", 1000); // Change duration as needed
 });
+
 function copyEmail(event){
     event.preventDefault();
     const emailAddress = "lark.orillos@gmail.com";
     navigator.clipboard.writeText(emailAddress);
     alert("Email Copied! " + emailAddress);
 }
-function toggleMenu() {
-    var menu = document.getElementById("popupMenu");
-    menu.classList.toggle("hidden");
-}
+
 // Toggle visibility of pop-up menu on burger icon click
 document.getElementById('burgerIcon').addEventListener('click', function() {
     // Toggle visibility of pop-up menu
@@ -146,9 +144,4 @@ document.getElementById('contactBtn').addEventListener('click', function() {
 
     // Redirect to Contact section
     window.location.href = '#contacts';
-});
-const darkModeToggle = document.getElementById('darkModeToggle');
-darkModeToggle.addEventListener('click', () => {
-    console.log('Dark mode toggle clicked');
-    document.documentElement.classList.toggle('dark');
 });
